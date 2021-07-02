@@ -42,4 +42,14 @@ export class Coin {
 
         return this._whenEven;
     }
+
+    public tossSwitch<IT extends any = any, IF extends any = any>(ifTrue: IT, ifFalse: IF): IT | IF {
+
+        const result: boolean = this.toss();
+
+        if (result) {
+            return ifTrue;
+        }
+        return ifFalse;
+    }
 }
