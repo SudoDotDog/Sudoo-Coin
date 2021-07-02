@@ -4,11 +4,13 @@
  * @description Coin
  */
 
+const EVEN_NUMBER: number = 50;
+
 export class Coin {
 
     public static even(whenEven?: boolean): Coin {
 
-        return new Coin(50, whenEven);
+        return new Coin(EVEN_NUMBER, whenEven);
     }
 
     public static withBreakPoint(breakPoint: number, whenEven?: boolean): Coin {
