@@ -14,3 +14,26 @@ yarn add @sudoo/coin
 # Or
 npm install @sudoo/coin --save
 ```
+
+## Usage
+
+Toss a coin
+
+```ts
+import { Coin } from "@sudoo/coin";
+
+const coin: Coin = Coin.even(); // A 50 / 50 coin
+const coin: Coin = Coin.withBreakPoint(10); // A 10 / 90 coin
+
+const result: boolean = coin.toss(); // true or false
+```
+
+Return random value with coin
+
+```ts
+import { Coin } from "@sudoo/coin";
+
+const coin: Coin = Coin.even();
+
+const result: string = coin.tossSwitch("Head", "Tail"); // Head or Tail
+```
