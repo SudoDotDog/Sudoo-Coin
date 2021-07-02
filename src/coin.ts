@@ -6,21 +6,40 @@
 
 export class Coin {
 
-    public static even() {
+    public static even(whenEven?: boolean): Coin {
 
-        return new Coin(50);
+        return new Coin(50, whenEven);
     }
 
-    public static withBreakPoint(breakPoint: number) {
+    public static withBreakPoint(breakPoint: number, whenEven?: boolean): Coin {
 
-        return new Coin(breakPoint);
+        return new Coin(breakPoint, whenEven);
     }
 
     private readonly _breakPoint: number;
+    private readonly _whenEven: boolean;
 
-    private constructor(breakPoint: number) {
+    private constructor(breakPoint: number, whenEven?: boolean) {
 
         const fixedBreakPoint: number = Math.max(0, Math.min(breakPoint, 100));
         this._breakPoint = fixedBreakPoint;
+
+        this._whenEven = Boolean(whenEven);
+    }
+
+    public toss(): boolean {
+
+        const random: number = Math.random();
+        const parsed: number = random * 100;
+
+        if (parsed > this._breakPoint) {
+            return true;
+        }
+
+        if (parsed < this._breakPoint) {
+            return false;
+        }
+
+        return this._whenEven;
     }
 }

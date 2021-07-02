@@ -5,3 +5,5 @@
  */
 
 export * from "./coin";
+export * from "./group";
+
