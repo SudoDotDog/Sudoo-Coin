@@ -8,6 +8,10 @@ ts_node := node_modules/.bin/ts-node
 mocha := node_modules/.bin/mocha
 eslint := node_modules/.bin/eslint
 
+# Build functions
+build_utils := node_modules/.bin/build-utils
+license_package := node_modules/.bin/license-package
+
 main: dev
 
 dev:
@@ -54,11 +58,11 @@ outdated: install
 
 license: clean
 	@echo "[INFO] Sign files"
-	@NODE_ENV=development $(ts_node) script/license.ts
+	@NODE_ENV=development $(license_package) license app
 
 clean:
 	@echo "[INFO] Cleaning release files"
-	@NODE_ENV=development $(ts_node) script/clean-app.ts
+	@NODE_ENV=development $(build_utils) clean-path app
 
 publish: install tests lint license build
 	@echo "[INFO] Publishing package"
