@@ -1,6 +1,6 @@
 # Sudoo-Coin
 
-[![Build Status](https://travis-ci.com/SudoDotDog/Sudoo-Coin.svg?branch=master)](https://travis-ci.com/SudoDotDog/Sudoo-Coin)
+[![Continuous Integration](https://github.com/SudoDotDog/Sudoo-Coin/actions/workflows/ci.yml/badge.svg)](https://github.com/SudoDotDog/Sudoo-Coin/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/SudoDotDog/Sudoo-Coin/branch/master/graph/badge.svg)](https://codecov.io/gh/SudoDotDog/Sudoo-Coin)
 [![npm version](https://badge.fury.io/js/%40sudoo%2Fcoin.svg)](https://www.npmjs.com/package/@sudoo/coin)
 [![downloads](https://img.shields.io/npm/dm/@sudoo/coin.svg)](https://www.npmjs.com/package/@sudoo/coin)
