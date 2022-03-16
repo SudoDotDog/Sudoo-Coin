@@ -7,6 +7,7 @@ tsc := node_modules/.bin/tsc
 ts_node := node_modules/.bin/ts-node
 mocha := node_modules/.bin/mocha
 eslint := node_modules/.bin/eslint
+nyc := node_modules/.bin/nyc
 
 # Build functions
 build_utils := node_modules/.bin/build-utils
@@ -30,7 +31,7 @@ tests:
 cov:
 	@echo "[INFO] Testing with Nyc and Mocha"
 	@NODE_ENV=test \
-	nyc $(mocha) --config test/.mocharc.json
+	$(nyc) $(mocha) --config test/.mocharc.json
 
 lint:
 	@echo "[INFO] Linting"
