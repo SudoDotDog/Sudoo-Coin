@@ -31,7 +31,6 @@ jobs:
       - name: Install Dependencies
         run: |
           make install
-          npm install nyc -g
       - name: Lint
         run: |
           make lint
