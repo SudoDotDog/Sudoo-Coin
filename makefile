@@ -6,6 +6,7 @@ dev := typescript/tsconfig.dev.json
 tsc := node_modules/.bin/tsc
 ts_node := node_modules/.bin/ts-node
 mocha := node_modules/.bin/mocha
+mocha-config := node_modules/@sudoo/mocha-config/.mocharc.json
 eslint := node_modules/.bin/eslint
 nyc := node_modules/.bin/nyc
 
@@ -26,12 +27,12 @@ build:
 tests:
 	@echo "[INFO] Testing with Mocha"
 	@NODE_ENV=test \
-	$(mocha) --config test/.mocharc.json
+	$(mocha) --config $(mocha-config)
 
 cov:
 	@echo "[INFO] Testing with Nyc and Mocha"
 	@NODE_ENV=test \
-	$(nyc) $(mocha) --config test/.mocharc.json
+	$(nyc) $(mocha) --config $(mocha-config)
 
 lint:
 	@echo "[INFO] Linting"
