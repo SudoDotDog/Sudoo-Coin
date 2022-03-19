@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/SudoDotDog/Sudoo-Coin#readme",
   "devDependencies": {
-    "@sudoo/triforce": "^3.0.0"
+    "@sudoo/triforce": "^3.2.0"
   },
   "nyc": {
     "extension": [
