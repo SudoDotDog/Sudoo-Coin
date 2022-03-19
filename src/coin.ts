@@ -45,7 +45,7 @@ export class Coin {
         return this._whenEven;
     }
 
-    public tossSwitch<IT extends any = any, IF extends any = any>(ifTrue: IT, ifFalse: IF): IT | IF {
+    public tossSwitch<IT = any, IF = any>(ifTrue: IT, ifFalse: IF): IT | IF {
 
         const result: boolean = this.toss();
 
